@@ -2447,7 +2447,23 @@ While historical records may be valuable for audit or transparency, they MAY als
 
 Implementations SHOULD define whether historical representations are retained, how they are accessed, and how long they are made available.
 
-## 14.10 Data Minimization Principle
+## 14.10 RFC6973 and DID Core Privacy Considerations Mapping
+
+This section maps the privacy considerations of `did:cndomain` to privacy threat categories commonly used in RFC6973 and DID Core privacy review.
+
+This mapping does not create additional protocol mechanisms. It identifies how the method's domain-anchored design may affect privacy and where deployers should apply the mitigations described in this section.
+
+- Surveillance: DNS discovery, HTTPS publication paths, resolver queries, service endpoints, and historical records may allow observers to infer which domains participate in DID-based trust infrastructure and which identifiers are queried over time. Deployers SHOULD minimize unnecessary resolver logging, avoid excessive public metadata, and use privacy-aware resolver deployment where query privacy is important.
+- Stored data compromise: DID Documents, resolver logs, audit records, lifecycle records, and historical representations may contain sensitive operational or governance information. Implementations SHOULD apply access controls, retention limits, log minimization, and integrity protection appropriate to the sensitivity of stored data.
+- Unsolicited traffic: Public service endpoints, well-known publication paths, and descriptive object-level identifiers may attract probing, scanning, or non-consensual interaction with exposed services. Deployers SHOULD publish only necessary service endpoints, avoid exposing sensitive object-local names, and operate public endpoints with appropriate abuse controls.
+- Misattribution: Stale DID Documents, cached metadata, outdated controller relationships, delegated authority, or domain transfer events may cause actions or authority to be incorrectly attributed to a current or former domain controller. Resolvers and relying parties SHOULD consider lifecycle state, freshness, delegation constraints, and current legitimate domain control before making attribution-sensitive decisions.
+- Correlation: Stable domain-level and object-level DIDs may enable correlation across applications, contexts, and time. Deployers SHOULD consider context-limited identifiers, reduced metadata, and non-descriptive object-local names where broad correlation would create material privacy risk.
+- Identification: Domain anchors, object-local names, service endpoints, controller relationships, and lifecycle metadata may identify organizations, services, infrastructure roles, or other subjects associated with a `.cn` domain. Deployers SHOULD assess whether such identification is necessary for the intended trust function before publishing the information.
+- Secondary use: Resolver logs, audit trails, lifecycle metadata, and historical DID Documents may be reused for purposes beyond DID resolution, verification, governance, or audit. Implementations SHOULD define policy limits for secondary use, retention, and access to such data.
+- Disclosure: DNS records, HTTPS publication endpoints, DID Document metadata, service entries, and lifecycle status values may disclose participation, topology, governance state, or operational relationships. Deployers SHOULD apply data minimization and disclose no more information than is necessary for trustworthy interpretation.
+- Exclusion: Parties affected by DID publication, delegation, lifecycle state, audit records, or historical representations may be unable to observe, correct, or contest privacy-affecting data if governance procedures do not provide an appropriate process. Governance frameworks SHOULD define how affected controllers, delegated controllers, and other relevant parties can handle correction, dispute, and continuity review where applicable.
+
+## 14.11 Data Minimization Principle
 
 A conforming deployment of `did:cndomain` SHOULD apply the principle of minimum necessary disclosure.
 
@@ -2458,7 +2474,7 @@ In particular:
 3. publicly exposed lifecycle, governance, and audit information SHOULD be limited to what is necessary for correct interpretation
 4. internal or sensitive operational metadata SHOULD NOT be exposed merely for convenience.
 
-## 14.11 Privacy Minimum Requirement
+## 14.12 Privacy Minimum Requirement
 
 A conforming deployment of `did:cndomain` SHOULD, at a minimum:
 
