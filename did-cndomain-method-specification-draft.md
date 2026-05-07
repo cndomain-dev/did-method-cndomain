@@ -7,7 +7,7 @@ did:cndomain Draft Editors
 Working Draft
 
 **Latest Version**
-Repository working draft
+https://cndomain-dev.github.io/did-method-cndomain/did-cndomain-method-specification-draft.html
 
 **This Version**
 Repository snapshot dated 2026-04-13
@@ -16,7 +16,7 @@ Repository snapshot dated 2026-04-13
 2026-04-13
 
 **Publication Note**
-A stable public URL is required before submission to the DID Method Registry.
+This working draft is published at the stable public URL listed above for DID Method Registry review.
 
 
 # 1. Introduction
