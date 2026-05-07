@@ -1,4 +1,4 @@
-\# did:cndomain
+# did:cndomain
 
 
 
@@ -6,7 +6,7 @@
 
 
 
- \## Status
+ ## Status
 
 
 
@@ -14,33 +14,33 @@
 
 
 
- \## Primary Specification (Normative)
+ ## Primary Specification (Normative)
 
 
 
- \- https://cndomain-dev.github.io/did-method-cndomain/
+ - https://cndomain-dev.github.io/did-method-cndomain/
 
- \- Source file: `did-cndomain-method-specification-draft.md`
-
-
-
- \## Supporting Rationale (Non-Normative)
+ - Source file: `did-cndomain-method-specification-draft.md`
 
 
 
- \- `why-did-cndomain-instead-of-did-dns.md`
+ ## Supporting Rationale (Non-Normative)
 
 
 
- \## Repository
+ - `why-did-cndomain-instead-of-did-dns.md`
 
 
 
- \- https://github.com/cndomain-dev/did-method-cndomain
+ ## Repository
 
 
 
- \## Scope
+ - https://github.com/cndomain-dev/did-method-cndomain
+
+
+
+ ## Scope
 
 
 
@@ -48,10 +48,10 @@
 
 
 
- \## Contact
+ ## Contact
 
 
 
- \- Maintainer: `cndomain-dev`
+ - Maintainer: `cndomain-dev`
 
- \- Email: zhangzhiyong@cnnic.cn
+ - Email: `zhangzhiyong@cnnic.cn`
