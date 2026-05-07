@@ -10,10 +10,10 @@ Working Draft
 https://cndomain-dev.github.io/did-method-cndomain/did-cndomain-method-specification-draft.html
 
 **This Version**
-Repository snapshot dated 2026-04-13
+Repository snapshot dated 2026-05-07
 
 **Date**
-2026-04-13
+2026-05-07
 
 **Publication Note**
 This working draft is published at the stable public URL listed above for DID Method Registry review.
@@ -3090,3 +3090,8 @@ At a minimum, an implementation claiming meaningful conformance with `did:cndoma
 3. preserve exact DID binding
 4. respect domain-anchored control semantics
 5. interpret lifecycle state in a non-misleading manner.
+
+# 18. Informative References
+
+- DID Core, W3C Recommendation, <https://www.w3.org/TR/did-core/>
+- RFC6973, Privacy Considerations for Internet Protocols, <https://www.rfc-editor.org/rfc/rfc6973.html>
