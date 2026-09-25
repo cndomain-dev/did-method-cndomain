@@ -5,8 +5,10 @@
   ## Primary Specification (Normative)
 
   - [did:cndomain Method Specification](./did-cndomain-method-specification-draft.md)
-- [did:cndomain Agent Identity Profile](./did-cndomain-agent-identity-profile.md) — Defines optional requirements for
-  `agent` object identifiers. It applies to implementations that claim conformance to this profile.
+
+  ## Optional Companion Profile (Normative)
+
+  - [did:cndomain Agent Identity Profile](./did-cndomain-agent-identity-profile.md) — Defines optional requirements for `agent` object identifiers. Implementations claiming conformance to this profile MUST meet its requirements.
   
   ## Supporting Document (Non-Normative)
 
